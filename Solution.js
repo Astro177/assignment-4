@@ -2,12 +2,12 @@
 
 // Taking a positive number, then doing simple multiplication, addition, division, subtraction with that number.
 
-function mindGame(number){
-      if(number<0){
+function mindGame(myNumber){
+      if(myNumber<0){
             return 'Please Provide a positive number';
       }
 
-      const multiplication = (number * 3);
+      const multiplication = (myNumber * 3);
       const addition = (multiplication + 10);
       const division = (addition / 2);
       const subtraction = (division - 5);
@@ -15,8 +15,7 @@ function mindGame(number){
       return subtraction;
       
 }
-const total = mindGame(23);
-console.log(total);
+
 
 // Problem Solution #2
 
@@ -35,8 +34,7 @@ function evenOdd(string){
          return 'odd';
       }
 }
-const result = evenOdd('solution complete');
-console.log(result);
+
 
 // Problem Solution #3
 
@@ -49,24 +47,23 @@ function isLGSeven(number){
 
          let subtraction = number - 7;
          if(subtraction < 7){
-            return number;
+            return subtraction;
          }
         else{
             return number *2;
         }
 }
-const output = isLGSeven(14);
-console.log(output);
+
 
 // Problem Solution #4
 
 // Taking an array as input then counting the negative numbers as 'bad data' and then returning the number of 'bad data' as output.
 
 
-let myArray = [4, -5, 0, 2, -67, 8, 10, -34, -2];
+// let myArray = [80 , 22 , -54, 5 , 77 , -20 , -47];
 
 function findingBadData(array) { 
-      if(typeof array !== Array.isArray){
+      if(!Array.isArray(array)){
             return 'Please provide an array'
       }
     let negatives = [];
@@ -78,7 +75,8 @@ function findingBadData(array) {
     }
     return negatives.length;
 }
-console.log(findingBadData(myArray));
+
+
 
 
 // Problem Solution #5
@@ -87,9 +85,10 @@ console.log(findingBadData(myArray));
 
 
 function gemsToDiamond(gem1, gem2, gem3){
-      if(typeof gem1 !== 'number' || typeof gem2 !== 'number' || typeof gem3 !== 'number'){
-            return 'Please provide gem number'
-      }
+    if(typeof gem1 != 'number' || typeof gem2 != 'number' || typeof gem3 != 'number' ){
+      return 'Please provide valid information';
+    }
+    else{
       convertingGem1 = gem1 * 21;
       convertingGem2 = gem2 * 32;
       convertingGem3 = gem3 * 43;
@@ -101,6 +100,6 @@ function gemsToDiamond(gem1, gem2, gem3){
       else if(totalDiamond >= 1000 * 2){
             return (totalDiamond - 2000);
       }
+   }
 }
-const numOfDiamond = gemsToDiamond(10, 20, 30);
-console.log(numOfDiamond);
+
